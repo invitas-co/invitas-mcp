@@ -1,0 +1,15 @@
+name: Error en la documentacion / Documentation error
+description: Una herramienta, un enlace o un paso no coincide con la realidad. / A tool, link or step does not match reality.
+labels: ["docs"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Donde / Where
+      description: Archivo o enlace. / File or link.
+    validations: {required: true}
+  - type: textarea
+    id: what
+    attributes:
+      label: Que esta mal / What is wrong
+    validations: {required: true}

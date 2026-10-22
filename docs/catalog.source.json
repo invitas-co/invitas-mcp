@@ -1,0 +1,204 @@
+{
+  "source": "invitas product, exported 2026-10-22",
+  "layoutsAnnounced": false,
+  "toolCount": 31,
+  "areas": [
+    {
+      "area": "Buscar",
+      "scope": "events:read",
+      "tools": [
+        {
+          "name": "guide",
+          "label": "Consultar la guía de invitas",
+          "desc": "El asistente consulta cómo se organiza invitas, cómo armar un evento y cómo recuperarse de errores de la API."
+        },
+        {
+          "name": "search",
+          "label": "Buscar entre tus eventos y las plantillas",
+          "desc": "El punto de entrada del conector: encuentra un evento tuyo o una plantilla y devuelve con qué id seguir."
+        },
+        {
+          "name": "fetch",
+          "label": "Leer el detalle de un resultado",
+          "desc": "Abre lo que encontró la búsqueda y devuelve su contenido, para que el asistente sepa de qué está hablando antes de tocar nada."
+        }
+      ]
+    },
+    {
+      "area": "Eventos",
+      "scope": "events:read · events:write",
+      "tools": [
+        {
+          "name": "list_templates",
+          "label": "Ver las plantillas disponibles",
+          "desc": "Las plantillas que puede elegir tu asistente, con su nombre, para qué evento son y el link de su demo."
+        },
+        {
+          "name": "list_events",
+          "label": "Listar mis eventos",
+          "desc": "Tus eventos con id, nombre, fecha y estado."
+        },
+        {
+          "name": "get_event",
+          "label": "Ver un evento",
+          "desc": "Lugar, fecha, plantilla, estado y el contenido de la invitación: secciones, textos, colores y qué funciones tienes activas."
+        },
+        {
+          "name": "create_event",
+          "label": "Crear un evento",
+          "desc": "Crea un evento nuevo en estado borrador."
+        },
+        {
+          "name": "update_event",
+          "label": "Editar un evento",
+          "desc": "Cambia nombre, fecha, lugar, plantilla o configuración."
+        },
+        {
+          "name": "publish_event",
+          "label": "Publicar un evento",
+          "desc": "Publica de verdad: la invitación queda visible en su URL pública."
+        },
+        {
+          "name": "unpublish_event",
+          "label": "Despublicar un evento",
+          "desc": "Baja la invitación: los invitados ven que estás haciendo ajustes en vez de un error. No borra nada ni pierdes lo que pagaste."
+        },
+        {
+          "name": "add_event_image",
+          "label": "Agregar una imagen al evento",
+          "desc": "Sube una foto una vez y la asigna a portada, fondo, sobre o una sección; devuelve la tarjeta del evento."
+        },
+        {
+          "name": "upsert_custom_section",
+          "label": "Guardar una sección con texto e imagen",
+          "desc": "Crea o actualiza una sección con título, texto y una foto opcional, conservando las demás secciones."
+        },
+        {
+          "name": "duplicate_event",
+          "label": "Duplicar un evento",
+          "desc": "Copia un evento propio como borrador nuevo, con sus archivos."
+        },
+        {
+          "name": "set_custom_fields",
+          "label": "Definir los datos de cada invitado",
+          "desc": "Datos de logística por persona: menú, transporte y cupos. Decide quién los llena, tú o el invitado. No guardes datos médicos."
+        },
+        {
+          "name": "export_event",
+          "label": "Exportar un evento",
+          "desc": "Exporta el evento completo (datos, configuración y archivos) para respaldo."
+        }
+      ]
+    },
+    {
+      "area": "Invitados y confirmaciones",
+      "scope": "guests:read · guests:write",
+      "tools": [
+        {
+          "name": "list_guests",
+          "label": "Listar invitados",
+          "desc": "Invitados con respuesta (sí, no, tal vez o pendiente), contacto, hogar, mesa y aperturas."
+        },
+        {
+          "name": "add_guests",
+          "label": "Agregar invitados",
+          "desc": "Carga invitados en lote (hasta 500 por llamada) con su link listo."
+        },
+        {
+          "name": "update_guest",
+          "label": "Editar un invitado",
+          "desc": "Actualiza nombre, email, WhatsApp, grupo o campos personalizados."
+        },
+        {
+          "name": "get_guest_link",
+          "label": "Link de invitación de un invitado",
+          "desc": "Busca sin tildes o por identificador. Ante homónimos pide elegir; admite enlaces privados revocables."
+        },
+        {
+          "name": "rsvp_guest",
+          "label": "Registrar confirmación",
+          "desc": "Marca la asistencia de un invitado como anfitrión (sí, no, tal vez o pendiente)."
+        },
+        {
+          "name": "rsvp_summary",
+          "label": "Resumen de confirmaciones",
+          "desc": "Cuántos confirmaron, cuántos dijeron que no y cuántos faltan por responder."
+        }
+      ]
+    },
+    {
+      "area": "Muro de mensajes",
+      "scope": "events:read · events:write",
+      "tools": [
+        {
+          "name": "list_messages",
+          "label": "Listar mensajes del muro",
+          "desc": "Todos los mensajes del muro, aprobados y pendientes de moderar."
+        },
+        {
+          "name": "moderate_message",
+          "label": "Moderar un mensaje",
+          "desc": "Aprueba u oculta un mensaje del muro sin borrarlo."
+        }
+      ]
+    },
+    {
+      "area": "Mesas",
+      "scope": "seating:read",
+      "tools": [
+        {
+          "name": "get_seating",
+          "label": "Ver el seating chart",
+          "desc": "Cada mesa con su capacidad y ocupantes, más los invitados sin mesa."
+        }
+      ]
+    },
+    {
+      "area": "Recordatorios de confirmación",
+      "scope": "events:read · guests:read",
+      "tools": [
+        {
+          "name": "list_reminders",
+          "label": "Ver quién falta por confirmar",
+          "desc": "Quiénes no han respondido y el historial de resúmenes enviados para el evento."
+        },
+        {
+          "name": "prepare_reminders",
+          "label": "Preparar recordatorios",
+          "desc": "Prepara textos con el tono elegido y el enlace personal de cada invitado pendiente. No envía correo ni WhatsApp: tú revisas y compartes cada mensaje. En invitaciones privadas completas el enlace con get_guest_link."
+        }
+      ]
+    },
+    {
+      "area": "Mesas",
+      "scope": "seating:read · seating:write",
+      "tools": [
+        {
+          "name": "create_table",
+          "label": "Crear una mesa",
+          "desc": "Agrega una mesa al plano con su nombre, capacidad y forma."
+        },
+        {
+          "name": "update_table",
+          "label": "Editar una mesa",
+          "desc": "Cambia el nombre, la capacidad, la forma o la posición de una mesa."
+        },
+        {
+          "name": "delete_table",
+          "label": "Borrar una mesa",
+          "desc": "Quita la mesa del plano. No borra a nadie: quienes estaban sentados quedan sin asignar."
+        },
+        {
+          "name": "assign_guest",
+          "label": "Sentar a un invitado",
+          "desc": "Sienta a una persona en una mesa; un acompañante va en la mesa de su titular."
+        },
+        {
+          "name": "unassign_guest",
+          "label": "Quitar a un invitado de su mesa",
+          "desc": "Deja a la persona sin mesa y libera su cupo."
+        }
+      ]
+    }
+  ]
+}

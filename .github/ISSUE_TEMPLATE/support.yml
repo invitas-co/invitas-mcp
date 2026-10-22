@@ -1,0 +1,21 @@
+name: Ayuda con el conector / Connector help
+description: Algo no conecta o el asistente no hace lo esperado. / Something does not connect or does not work as expected.
+labels: ["soporte"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Este reporte es público. Describe lo que pasó con ejemplos ficticios. No publiques datos de invitados, correos, teléfonos, tokens ni capturas con datos personales. Para recibir ayuda, visita https://invitas.co/ayuda o escribe a hola@invitas.co.
+
+        This report is public. Describe what happened using fictional examples. Do not post guest data, email addresses, phone numbers, tokens or screenshots containing personal information. For help, visit https://invitas.co/ayuda or email hola@invitas.co.
+  - type: dropdown
+    id: client
+    attributes:
+      label: Asistente / Assistant
+      options: [Claude, ChatGPT, Perplexity, Gemini, Terminal, Otro / Other]
+    validations: {required: true}
+  - type: textarea
+    id: what
+    attributes:
+      label: Qué pasa / What happens
+    validations: {required: true}

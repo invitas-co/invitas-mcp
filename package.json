@@ -1,0 +1,10 @@
+{
+  "name": "invitas-mcp",
+  "private": true,
+  "description": "Public docs for the invitas MCP connector. No product code.",
+  "type": "module",
+  "scripts": {
+    "catalog": "node scripts/generate-catalog.mjs",
+    "check": "node scripts/generate-catalog.mjs --check"
+  }
+}

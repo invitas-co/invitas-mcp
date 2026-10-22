@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ayuda y preguntas frecuentes / Help center
+    url: https://invitas.co/ayuda
+    about: Respuestas sobre el conector, tu cuenta y tus eventos. / Answers about the connector, your account and your events.
+  - name: Privacidad / Privacy
+    url: https://invitas.co/privacidad
+    about: Como tratamos tus datos. / How we handle your data.
