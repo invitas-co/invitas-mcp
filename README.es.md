@@ -21,13 +21,28 @@ La lista completa de herramientas se genera desde el catálogo del producto: [Ca
 
 Elige tu asistente, conéctalo a invitas y revisa los permisos antes de autorizar el acceso. El conector está incluido en todos los planes de invitas, también en el gratuito. Las funciones y los límites de tu evento corresponden al plan que tenga.
 
-- [Claude](docs/connect/claude.md)
-- [ChatGPT](docs/connect/chatgpt.md)
-- [Otros clientes MCP y terminal](docs/connect/other-clients.md)
+- [ChatGPT](docs/connect/chatgpt.md#español)
+- [Claude app y web](docs/connect/claude.md#español)
+- [Claude Code](docs/connect/claude-code.md#español)
+- [Codex CLI](docs/connect/codex-cli.md#español)
+- [Gemini CLI](docs/connect/gemini-cli.md#español)
+- [Cursor](docs/connect/cursor.md#español)
+- [VS Code (GitHub Copilot)](docs/connect/vscode.md#español)
+- [OpenCode](docs/connect/opencode.md#español)
+- [Hermes Agent (Nous Research)](docs/connect/hermes-agent.md#español)
+- [OpenClaw](docs/connect/openclaw.md#español)
+- [Grok (grok.com)](docs/connect/grok.md#español)
+- [Grok Build](docs/connect/grok-build.md#español)
+- [Grok Bot para equipos](docs/connect/grok-bot.md#español)
+- [Agente de código Pi](docs/connect/pi.md#español)
+- [Windsurf / Cascade](docs/connect/windsurf.md#español)
+- [Zed](docs/connect/zed.md#español)
+- [Muse Code (Meta)](docs/connect/muse-code.md#español)
+- [Otros clientes MCP y terminal](docs/connect/other-clients.md#español)
 
 ## Inicio de sesión y permisos
 
-El conector usa OAuth 2.1. Inicia sesión en invitas cuando se te solicite y revisa la pantalla de consentimiento antes de autorizar a tu asistente.
+El conector usa Streamable HTTP y OAuth 2.1 con PKCE y registro dinámico de clientes. Inicia sesión en invitas cuando se te solicite y revisa la pantalla de consentimiento antes de autorizar a tu asistente.
 
 | Permiso | Acceso |
 | --- | --- |
@@ -38,7 +53,7 @@ El conector usa OAuth 2.1. Inicia sesión en invitas cuando se te solicite y rev
 | `seating:read` | Consultar la distribución de mesas. |
 | `seating:write` | Actualizar la distribución de mesas. |
 
-Para clientes de terminal, crea un token de acceso personal en **Mi cuenta**, elige sus permisos y envíalo en la cabecera `Authorization: Bearer <token>`. Consulta los detalles en [Otros clientes MCP y terminal](docs/connect/other-clients.md).
+Los clientes de terminal compatibles con OAuth pueden usar el inicio de sesión en el navegador siguiendo las guías anteriores. Para clientes que admitan cabeceras bearer, crea un token de acceso personal en **Mi cuenta**, elige sus permisos y envíalo en la cabecera `Authorization: Bearer <token>`. Consulta los detalles en [Otros clientes MCP y terminal](docs/connect/other-clients.md#español).
 
 ## Qué ve el asistente y cómo desconectarlo
 

@@ -21,13 +21,28 @@ The full tool list is generated from the product catalogue: [Tool catalogue](doc
 
 Choose your assistant below, connect it to invitas and review the permissions before authorising access. The connector is included in every invitas plan, including the free plan. Your event's features and limits follow its plan.
 
-- [Claude](docs/connect/claude.md)
 - [ChatGPT](docs/connect/chatgpt.md)
+- [Claude app and web](docs/connect/claude.md)
+- [Claude Code](docs/connect/claude-code.md)
+- [Codex CLI](docs/connect/codex-cli.md)
+- [Gemini CLI](docs/connect/gemini-cli.md)
+- [Cursor](docs/connect/cursor.md)
+- [VS Code (GitHub Copilot)](docs/connect/vscode.md)
+- [OpenCode](docs/connect/opencode.md)
+- [Hermes Agent (Nous Research)](docs/connect/hermes-agent.md)
+- [OpenClaw](docs/connect/openclaw.md)
+- [Grok (grok.com)](docs/connect/grok.md)
+- [Grok Build](docs/connect/grok-build.md)
+- [Grok Bot for teams](docs/connect/grok-bot.md)
+- [Pi coding agent](docs/connect/pi.md)
+- [Windsurf / Cascade](docs/connect/windsurf.md)
+- [Zed](docs/connect/zed.md)
+- [Muse Code (Meta)](docs/connect/muse-code.md)
 - [Other MCP clients and terminal](docs/connect/other-clients.md)
 
 ## Sign-in and permissions
 
-The connector uses OAuth 2.1. Sign in to invitas when prompted, then review the consent screen before authorising your assistant.
+The connector uses Streamable HTTP and OAuth 2.1 with PKCE and dynamic client registration. Sign in to invitas when prompted, then review the consent screen before authorising your assistant.
 
 | Permission | Access |
 | --- | --- |
@@ -38,7 +53,7 @@ The connector uses OAuth 2.1. Sign in to invitas when prompted, then review the 
 | `seating:read` | Read table arrangements. |
 | `seating:write` | Update table arrangements. |
 
-For terminal clients, create a personal access token in **Mi cuenta**, choose its permissions and send it in the `Authorization: Bearer <token>` header. See [Other MCP clients and terminal](docs/connect/other-clients.md) for connection details.
+Terminal clients that support OAuth can use browser sign-in through the guides above. For clients that support bearer headers instead, create a personal access token in **Mi cuenta**, choose its permissions and send it in the `Authorization: Bearer <token>` header. See [Other MCP clients and terminal](docs/connect/other-clients.md) for connection details.
 
 ## What the assistant sees, and how to disconnect
 
