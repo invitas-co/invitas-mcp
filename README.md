@@ -70,6 +70,12 @@ See [example conversations](examples/conversations.md) for requests you can make
 - [Privacy policy](https://invitas.co/privacidad) · [Sub-processors](https://invitas.co/subprocesadores) · [Terms](https://invitas.co/terminos)
 - [Help](https://invitas.co/ayuda) · Support: hola@invitas.co
 
+## Repository development
+
+This repository contains documentation and a generated tool catalogue; the hosted connector runs in the invitas application. With Node.js 22 installed, run `npm run check` to verify that generated catalogue files match their source. Run `npm run catalog` after editing `docs/catalog.source.json` to regenerate them. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+The `docs/` directory contains the catalogue and client guides, `examples/` contains conversations, and `scripts/` contains the catalogue generator. Changes to this repository publish documentation through the repository; deploying the hosted connector is handled by the application repository.
+
 ## License
 
 Documentation: [CC BY 4.0](LICENSE).
