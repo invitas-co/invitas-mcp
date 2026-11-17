@@ -12,7 +12,7 @@ Servidor oficial de Model Context Protocol (MCP) para [invitas.co](https://invit
 
 ## Arquitectura y Flujo de Interacción
 
-El conector expone 31 herramientas nativas mediante Streamable HTTP y JSON-RPC 2.0, autenticando solicitudes con OAuth 2.1 (PKCE) o Tokens de Acceso Personal (PAT).
+El conector autentica las solicitudes mediante OAuth 2.1 (PKCE) o tokens de acceso personal (PAT).
 
 ```mermaid
 sequenceDiagram
@@ -32,18 +32,13 @@ sequenceDiagram
 
 ---
 
-## Categorías de Herramientas (31 Herramientas)
+## Herramientas
 
-Todas las herramientas se catalogan y sincronizan desde la especificación central de la API. Consulta el [Catálogo completo de herramientas](docs/tools.md) para esquemas y parámetros detallados.
+El [catálogo](docs/tools.md) enumera las herramientas y sus permisos. La disponibilidad depende del evento y de las funciones habilitadas en la cuenta.
 
-| Categoría | Herramientas Disponibles | Permisos Requeridos |
-|---|---|---|
-| **Búsqueda y Guía** | `guide`, `search`, `fetch` | `events:read` |
-| **Eventos y Plantillas** | `list_templates`, `list_events`, `get_event`, `create_event`, `update_event`, `publish_event`, `unpublish_event`, `duplicate_event`, `export_event` | `events:read`, `events:write` |
-| **Medios y Secciones** | `add_event_image`, `upsert_custom_section`, `set_custom_fields` | `events:read`, `events:write` |
-| **Invitados y RSVPs** | `list_guests`, `get_guest`, `add_guest`, `update_guest`, `remove_guest`, `import_guests`, `export_guests` | `guests:read`, `guests:write` |
-| **Mesas y Asientos** | `get_seating_chart`, `update_seating_chart`, `assign_guest_table`, `unassign_guest_table` | `seating:read`, `seating:write` |
-| **Comunicaciones y Muro** | `list_wall_messages`, `moderate_wall_message`, `prepare_reminder`, `get_event_statistics` | `events:read`, `guests:read` |
+## Plugin de Claude
+
+El [plugin de invitas](plugins/invitas) incluye la conexión y dos skills para empezar y crear una invitación propia a partir de una idea, HTML o un PDF adjunto.
 
 ---
 

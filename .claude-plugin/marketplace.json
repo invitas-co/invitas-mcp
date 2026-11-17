@@ -1,0 +1,14 @@
+{
+  "name": "invitas-co",
+  "description": "Official invitas plugins",
+  "owner": {
+    "name": "invitas"
+  },
+  "plugins": [
+    {
+      "name": "invitas",
+      "source": "./plugins/invitas",
+      "description": "Manage events, custom invitations and guests with invitas."
+    }
+  ]
+}

@@ -12,7 +12,7 @@ Official Model Context Protocol (MCP) server for [invitas.co](https://invitas.co
 
 ## Architecture & Interaction Flow
 
-The connector exposes 31 native tools via Streamable HTTP and JSON-RPC 2.0, authenticating requests via OAuth 2.1 (PKCE) or Personal Access Tokens (PAT).
+The connector authenticates requests through OAuth 2.1 (PKCE) or Personal Access Tokens (PAT).
 
 ```mermaid
 sequenceDiagram
@@ -32,18 +32,13 @@ sequenceDiagram
 
 ---
 
-## Tool Categories (31 Tools)
+## Tools
 
-All tools are automatically catalogued from the core API specification. See [Full Tool Catalogue](docs/tools.md) for schemas and parameter details.
+The [tool catalogue](docs/tools.md) lists the tools and scopes. Availability depends on the event and the features enabled for the account.
 
-| Category | Available Tools | Required Scopes |
-|---|---|---|
-| **Discovery & Guidance** | `guide`, `search`, `fetch` | `events:read` |
-| **Events & Templates** | `list_templates`, `list_events`, `get_event`, `create_event`, `update_event`, `publish_event`, `unpublish_event`, `duplicate_event`, `export_event` | `events:read`, `events:write` |
-| **Media & Sections** | `add_event_image`, `upsert_custom_section`, `set_custom_fields` | `events:read`, `events:write` |
-| **Guests & RSVPs** | `list_guests`, `get_guest`, `add_guest`, `update_guest`, `remove_guest`, `import_guests`, `export_guests` | `guests:read`, `guests:write` |
-| **Seating & Tables** | `get_seating_chart`, `update_seating_chart`, `assign_guest_table`, `unassign_guest_table` | `seating:read`, `seating:write` |
-| **Comms & Wall** | `list_wall_messages`, `moderate_wall_message`, `prepare_reminder`, `get_event_statistics` | `events:read`, `guests:read` |
+## Claude plugin
+
+The [invitas plugin](plugins/invitas) bundles the connection and two skills for getting started and building a custom invitation from an idea, HTML or a PDF attachment.
 
 ---
 
