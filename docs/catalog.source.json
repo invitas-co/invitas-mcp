@@ -1,7 +1,7 @@
 {
-  "source": "invitas product, exported 2026-10-22",
+  "source": "invitas product, exported 2026-11-17",
   "layoutsAnnounced": false,
-  "toolCount": 31,
+  "toolCount": 36,
   "areas": [
     {
       "area": "Buscar",
@@ -91,6 +91,32 @@
       ]
     },
     {
+      "area": "HTML propio",
+      "scope": "events:read · events:write",
+      "tools": [
+        {
+          "name": "list_html_designs",
+          "label": "Ver diseños HTML y requisitos",
+          "desc": "Consulta disponibilidad desde el plan Animado, requisitos y versiones del diseño."
+        },
+        {
+          "name": "submit_html_design",
+          "label": "Guardar un diseño HTML propio",
+          "desc": "Guarda una versión y devuelve el informe para corregirla; no la activa."
+        },
+        {
+          "name": "preview_html_design",
+          "label": "Ver el diseño antes de activarlo",
+          "desc": "Obtiene una vista previa privada y capturas sin cambiar la invitación."
+        },
+        {
+          "name": "activate_html_design",
+          "label": "Activar un diseño HTML",
+          "desc": "Activa una versión aprobada o solicita revisión; permite volver a una versión anterior."
+        }
+      ]
+    },
+    {
       "area": "Invitados y confirmaciones",
       "scope": "guests:read · guests:write",
       "tools": [
@@ -108,6 +134,11 @@
           "name": "update_guest",
           "label": "Editar un invitado",
           "desc": "Actualiza nombre, email, WhatsApp, grupo o campos personalizados."
+        },
+        {
+          "name": "set_guests_language",
+          "label": "Elegir el idioma de invitados",
+          "desc": "Asigna o limpia el idioma de personas seleccionadas cuando los idiomas están habilitados; no traduce el contenido del anfitrión."
         },
         {
           "name": "get_guest_link",
@@ -143,17 +174,6 @@
       ]
     },
     {
-      "area": "Mesas",
-      "scope": "seating:read",
-      "tools": [
-        {
-          "name": "get_seating",
-          "label": "Ver el seating chart",
-          "desc": "Cada mesa con su capacidad y ocupantes, más los invitados sin mesa."
-        }
-      ]
-    },
-    {
       "area": "Recordatorios de confirmación",
       "scope": "events:read · guests:read",
       "tools": [
@@ -173,6 +193,11 @@
       "area": "Mesas",
       "scope": "seating:read · seating:write",
       "tools": [
+        {
+          "name": "get_seating",
+          "label": "Ver el seating chart",
+          "desc": "Cada mesa con su capacidad y ocupantes, más los invitados sin mesa."
+        },
         {
           "name": "create_table",
           "label": "Crear una mesa",

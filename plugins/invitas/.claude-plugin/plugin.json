@@ -1,0 +1,21 @@
+{
+  "name": "invitas",
+  "version": "1.0.4",
+  "description": "Manage events, custom invitations and guests with invitas.",
+  "author": {
+    "name": "invitas",
+    "email": "hola@invitas.co",
+    "url": "https://invitas.co"
+  },
+  "homepage": "https://invitas.co/asistentes",
+  "repository": "https://github.com/invitas-co/invitas-mcp",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "events",
+    "invitations",
+    "guests",
+    "rsvp"
+  ],
+  "icon": "./assets/icon.png",
+  "privacyPolicyUrl": "https://invitas.co/privacidad"
+}
